@@ -1,6 +1,6 @@
 {
-  "name": "capacitor-lottie-splash-screen",
-  "version": "7.3.0",
+  "name": "@neoniv/capacitor-lottie-splash-screen",
+  "version": "8.0.1",
   "description": "Lottie Splash Screen plugin for Capacitor",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -15,14 +15,14 @@
     "Package.swift",
     "CapacitorLottieSplashScreen.podspec"
   ],
-  "author": "Luan Freitas (ludufre)",
+  "author": "neoniv",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ludufre/capacitor-lottie-splash-screen.git"
+    "url": "git+https://github.com/neoniv-fr/capacitor-lottie-splash-screen.git"
   },
   "bugs": {
-    "url": "https://github.com/ludufre/capacitor-lottie-splash-screen/issues"
+    "url": "https://github.com/neoniv-fr/capacitor-lottie-splash-screen/issues"
   },
   "keywords": [
     "capacitor",

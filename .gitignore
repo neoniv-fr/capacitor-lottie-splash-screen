@@ -69,6 +69,6 @@ captures
 .externalNativeBuild
 
 # Locally published versions
-capacitor-lottie-splash-screen-*.tgz
+*.tgz
 
 CLAUDE.md

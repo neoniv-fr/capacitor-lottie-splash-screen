@@ -14,5 +14,5 @@ project(':capacitor-keyboard').projectDir = new File('../node_modules/@capacitor
 include ':capacitor-status-bar'
 project(':capacitor-status-bar').projectDir = new File('../node_modules/@capacitor/status-bar/android')
 
-include ':capacitor-lottie-splash-screen'
-project(':capacitor-lottie-splash-screen').projectDir = new File('../../android')
+include ':neoniv-capacitor-lottie-splash-screen'
+project(':neoniv-capacitor-lottie-splash-screen').projectDir = new File('../../android')

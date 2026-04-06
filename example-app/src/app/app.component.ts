@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { IonApp, IonRouterOutlet, Platform } from '@ionic/angular/standalone';
-import { LottieSplashScreen } from 'capacitor-lottie-splash-screen';
+import { LottieSplashScreen } from '@neoniv/capacitor-lottie-splash-screen';
 
 @Component({
   selector: 'app-root',

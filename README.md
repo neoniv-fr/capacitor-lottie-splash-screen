@@ -1,15 +1,17 @@
 <p align="center"><br><img src="https://user-images.githubusercontent.com/236501/85893648-1c92e880-b7a8-11ea-926d-95355b8175c7.png" width="128" height="128" /></p>
 <h3 align="center">Lottie Splash Screen</h3>
-<p align="center"><strong><code>capacitor-lottie-splash-screen</code></strong></p>
+<p align="center"><strong><code>@neoniv/capacitor-lottie-splash-screen</code></strong></p>
 <p align="center">
   Lottie Splash Screen plugin for Ionic Capacitor
 </p>
 
+> **Note:** This is a fork of [`capacitor-lottie-splash-screen`](https://github.com/ludufre/capacitor-lottie-splash-screen) by [ludufre](https://github.com/ludufre). The original repository has not yet been updated to support **Capacitor 8** and **Apple Swift Package Manager (SPM)**. This fork adds that support. If the original repo merges [PR #8](https://github.com/ludufre/capacitor-lottie-splash-screen/pull/8), you can switch back to the original package.
+
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2025?style=flat-square" />
-  <a href="https://www.npmjs.com/package/capacitor-lottie-splash-screen"><img src="https://img.shields.io/npm/l/capacitor-lottie-splash-screen?style=flat-square" /></a>
-  <a href="https://www.npmjs.com/package/capacitor-lottie-splash-screen"><img src="https://img.shields.io/npm/dw/capacitor-lottie-splash-screen?style=flat-square" /></a>
-  <a href="https://www.npmjs.com/package/capacitor-lottie-splash-screen"><img src="https://img.shields.io/npm/v/capacitor-lottie-splash-screen?style=flat-square" /></a>
+  <img src="https://img.shields.io/maintenance/yes/2026?style=flat-square" />
+  <a href="https://www.npmjs.com/package/@neoniv/capacitor-lottie-splash-screen"><img src="https://img.shields.io/npm/l/@neoniv/capacitor-lottie-splash-screen?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@neoniv/capacitor-lottie-splash-screen"><img src="https://img.shields.io/npm/dw/@neoniv/capacitor-lottie-splash-screen?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@neoniv/capacitor-lottie-splash-screen"><img src="https://img.shields.io/npm/v/@neoniv/capacitor-lottie-splash-screen?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-0-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
@@ -28,18 +30,19 @@
 
 ## Maintainers
 
-| Maintainer             | GitHub                                | Social                            | LinkedIn                                                           |
-| ---------------------- | ------------------------------------- | --------------------------------- | ------------------------------------------------------------------ |
-| Luan Freitas (ludufre) | [ludufre](https://github.com/ludufre) | [@ludufre](https://x.com/ludufre) | [Luan Freitas](https://www.linkedin.com/in/luan-freitas-14341687/) |
+| Maintainer                | GitHub                                    | Social                                  | LinkedIn                                                                        |
+| ------------------------- | ----------------------------------------- | --------------------------------------- | ------------------------------------------------------------------------------- |
+| Luan Freitas (ludufre)    | [ludufre](https://github.com/ludufre)     | [@ludufre](https://x.com/ludufre)       | [Luan Freitas](https://www.linkedin.com/in/luan-freitas-14341687/)              |
+| Sylvain Le Gléau (NéoNiv) | [sylvainlg](https://github.com/sylvainlg) | [@sylvain_lg](https://x.com/sylvain_lg) | [Sylvain Le Gléau](https://www.linkedin.com/in/sylvain-le-gl%C3%A9au-69283883/) |
 
 ## Installation
 
 ```bash
-npm install capacitor-lottie-splash-screen
+npm install @neoniv/capacitor-lottie-splash-screen
 npx cap sync
 
 # or using pnpm
-pnpm add capacitor-lottie-splash-screen
+pnpm add @neoniv/capacitor-lottie-splash-screen
 npx cap sync
 ```
 
@@ -68,17 +71,14 @@ const config: CapacitorConfig = {
 ### **⚠️ Important Notes!**
 
 - **autoHide true:**
-
   - The splash screen will hide automatically after the animation ends.
   - If you call `LottieSplashScreen.appLoaded()` _before_ the animation ends, it will wait until the animation finishes.
   - Calling `LottieSplashScreen.hide()` will hide it immediately without waiting for the end.
 
 - **autoHide false (default):**
-
   - You must call `LottieSplashScreen.appLoaded()` to hide the splash screen after your app is loaded. If you do not call it, the splash screen will remain visible indefinitely with last frame displayed.
 
 - **Loop behavior:**
-
   - If `loop` is `true`, the animation will continue looping until `LottieSplashScreen.appLoaded()` is called (which stops it immediately).
   - To play the animation only once, set `loop` to `false` (default behavior).
   - Tip: If `loop: true` and `autoHide: true`, the plugin will disable looping automatically (they’re incompatible). Use `loop: true` only when you’re controlling the splash manually.
@@ -96,7 +96,7 @@ Call `LottieSplashScreen.appLoaded();` when the App is ready.
 ```typescript
 // Splash screen will only close after this call and the animation ends unless you set "autoHide: true" which will hide it automatically.
 import { Platform } from '@ionic/angular';
-import { LottieSplashScreen } from 'capacitor-lottie-splash-screen';
+import { LottieSplashScreen } from '@neoniv/capacitor-lottie-splash-screen';
 
 constructor(private platform: Platform) {
   this.platform.ready().then(() => {
@@ -136,9 +136,9 @@ LottieSplashScreen.addListener('onAnimationEnd', () => {
 
 ## Highly Inspired / Credits
 
-- https://github.com/Get-Local/capacitor-lottie-splash-screen
-- https://github.com/MorphoodInc/capacitor-lottie-splash-screen
-- https://github.com/muhammadosmanali/capacitor-lottie-splash-screen
+- https://github.com/Get-Local/@neoniv/capacitor-lottie-splash-screen
+- https://github.com/MorphoodInc/@neoniv/capacitor-lottie-splash-screen
+- https://github.com/muhammadosmanali/@neoniv/capacitor-lottie-splash-screen
 
 <a href="https://www.buymeacoffee.com/ludufre"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"></a>
 
@@ -146,12 +146,12 @@ LottieSplashScreen.addListener('onAnimationEnd', () => {
 
 <docgen-index>
 
-* [`appLoaded()`](#apploaded)
-* [`show(...)`](#show)
-* [`hide()`](#hide)
-* [`isAnimating()`](#isanimating)
-* [`addListener('onAnimationEnd', ...)`](#addlisteneronanimationend-)
-* [Interfaces](#interfaces)
+- [`appLoaded()`](#apploaded)
+- [`show(...)`](#show)
+- [`hide()`](#hide)
+- [`isAnimating()`](#isanimating)
+- [`addListener('onAnimationEnd', ...)`](#addlisteneronanimationend-)
+- [Interfaces](#interfaces)
 
 </docgen-index>
 
@@ -172,8 +172,7 @@ If the splash is configured to loop, this will forcibly stop it.
 
 **Since:** 7.0.0
 
---------------------
-
+---
 
 ### show(...)
 
@@ -191,8 +190,7 @@ This is useful for scenarios like restarting the splash for a specific action or
 
 **Since:** 7.0.0
 
---------------------
-
+---
 
 ### hide()
 
@@ -206,8 +204,7 @@ Use this when you want to forcefully remove the splash overlay (e.g., on error o
 
 **Since:** 7.0.0
 
---------------------
-
+---
 
 ### isAnimating()
 
@@ -223,8 +220,7 @@ Returns a boolean wrapped in a promise indicating the splash screen’s active s
 
 **Since:** 7.0.0
 
---------------------
-
+---
 
 ### addListener('onAnimationEnd', ...)
 
@@ -245,11 +241,9 @@ This event is triggered once the animation finishes and the overlay is removed.
 
 **Since:** 7.0.0
 
---------------------
-
+---
 
 ### Interfaces
-
 
 #### LottieSplashScreenShowOptions
 
@@ -259,7 +253,6 @@ Options for showing the Lottie splash screen animation programmatically.
 | ---------------- | -------------------- |
 | **`animation`**  | <code>string</code>  |
 | **`isDarkMode`** | <code>boolean</code> |
-
 
 #### PluginListenerHandle
 

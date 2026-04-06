@@ -5,7 +5,7 @@ import { IonicRouteStrategy, provideIonicAngular } from '@ionic/angular/standalo
 import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
 import { provideAppInitializer } from '@angular/core';
-import { LottieSplashScreen } from 'capacitor-lottie-splash-screen';
+import { LottieSplashScreen } from '@neoniv/capacitor-lottie-splash-screen';
 
 bootstrapApplication(AppComponent, {
   providers: [
